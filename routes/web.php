@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AddItem;
+use App\Http\Controllers\DeleteItem;
 use App\Http\Controllers\IndexItems;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +21,5 @@ Route::get('/', function () {
 });
 
 Route::get('items', IndexItems::class);
+Route::get('new-item', AddItem::class);
+Route::get('delete-item/{id}', DeleteItem::class);
