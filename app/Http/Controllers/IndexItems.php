@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\Item as ResourcesItem;
-use App\Models\Item;
+use App\Models\Product;
 use Illuminate\Http\Request;
-use App\Http\Resources\Items;
 
 class IndexItems extends Controller
 {
@@ -17,6 +16,6 @@ class IndexItems extends Controller
      */
     public function __invoke(Request $request)
     {
-        return ResourcesItem::collection(Item::all());
+        return ResourcesItem::collection(Product::all());
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Item;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class DeleteItem extends Controller
@@ -12,7 +12,7 @@ class DeleteItem extends Controller
      */
     public function __invoke(string $id)
     {
-        Item::findOrFail($id)->delete();
+        Product::findOrFail($id)->delete();
 
         return response()->json(['success'], 200);
     }

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\Item as ResourcesItem;
-use App\Models\Item;
+use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -17,7 +17,7 @@ class AddItem extends Controller
      */
     public function __invoke(Request $request)
     {
-        $item = Item::factory()->create([
+        $item = Product::factory()->create([
             'user_id' => User::all()->random()->id,
         ]);
 
